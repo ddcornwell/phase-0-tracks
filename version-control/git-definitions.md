@@ -16,4 +16,6 @@
 
 * What is a merge conflict?
 
-<!-- Sometimes you get merge conflicts when merging or pulling from a branch. -->
+<!-- Sometimes you get merge conflicts when merging pulling from a branch. -->
+
+ONE CHANGE HERE
