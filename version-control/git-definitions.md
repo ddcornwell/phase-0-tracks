@@ -16,7 +16,7 @@
 
 * What is a merge conflict?
 
-<<<<<<< HEAD
+
 <!-- Sometimes you get merge conflicts when merging pulling from a branch. -->
 
 ONE CHANGE HERE
