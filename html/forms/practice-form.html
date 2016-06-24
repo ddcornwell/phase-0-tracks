@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel</title>
+</head>
+<body>
+	<form name="travel" action="success.html" method="post">
+	<fieldset>
+    <div>
+      <label>Full name:</label>
+      <input type="text" name="fullname">
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" name="email">
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <div>
+      <label>Type your destination:</label>
+      <input type="text" name="adv-name" placeholder="Destination">
+    </div>
+
+    <div>
+      <label>Transport:</label>
+      <select name="Transport">
+        <option value="Vehicle">Car</option>
+        <option value="Vehicle">Bus</option>
+        <option value="Vehicle">Plane</option>
+        <option value="Vehicle">Train</option>
+      </select>
+    </div>
+
+    <div>    
+      <label>Embark date:</label>
+      <input type="date" name="date">
+    </div>
+
+    <div>
+    	<label>Personal travel details</label>
+    	<textarea name="textarea" rows="10" cols="50">Fill in travel details we may need to know (handicaps, pets, children, allergies, ect.)
+    	</textarea>
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+      Let's go!
+    </div>
+  </fieldset>
+  
+  <button type="submit">Save my travel info</button>
+</form>
+
+
+</body>
+</html>
