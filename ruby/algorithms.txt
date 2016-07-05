@@ -1,0 +1,31 @@
+
+
+Release 0: Equip Your New Robot
+
+building have ten floors.
+
+elevator dos up and down through floors.
+buttons in elevator ten buttons.
+
+
+- Move until a wall is reached (Wall A = front desk ).
+- Move right along Wall A until reached (Wall B = elevator hall).
+- 
+    - Move take 5 step back and turn left 90 degrees.
+    - Move 3 step turn 180 degrees. 
+      take right arm and push 5th light from top, doors will close.
+      Wait.
+    - if doors open and looks like ( 5 ) take ten steps forward direction.
+    - else stay still.
+end
+	
+
+Release 1: Find a Real-Life Algorithm
+
+- for 7 days of the week:
+    - Until 3:00, or until wife yells mail:
+        - walk to mail box.
+        - pull mail out, walk back home.
+    - If sunday stay home:
+        - yell back to wife its sunday.
+
