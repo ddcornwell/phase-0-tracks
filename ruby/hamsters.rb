@@ -2,7 +2,8 @@
 # hamster's name (the clerk names any hamsters who come in without name tags, so all hamsters have names)
 
 puts "what is your hamsters name?"
-hamster_name = gets.chomp
+hamster_name = gets.chomp.capitalize
+puts "#{hamster_name}, Great Name!"
 puts ""
 # volume level from 1 to 10 (some people are light sleepers who won't adopt extra-squeaky hamsters)
 
@@ -12,17 +13,18 @@ until ((1..10) === hamster_vol.to_i)
 	puts "needs to be 1-10"
 	hamster_vol = gets.chomp.to_i
 end
+puts "that nice #{hamster_vol} volume!"
 puts ""
 # fur color
 
 puts "what is your hamsters fur color?"
-hamster_fur = gets.chomp
+hamster_fur = gets.chomp.upcase!
+puts "#{hamster_fur} is a great color for a hamster!"
 puts ""
 # whether the hamster is a good candidate for adoption
 
 puts "Is your hamster ready for adoption? yes or no"
-adoption = gets.chomp
-puts ""
+adoption = gets.chomp.downcase
 
 until adoption == true || adoption == false
 if adoption == "yes"
@@ -33,7 +35,7 @@ elsif adoption == "no"
 	 adoption = false
 	else 
 		puts "need to put yes or no?"
-		adoption = gets.chomp
+		adoption = gets.chomp.downcase
 	end
 end
 puts ""
@@ -54,8 +56,8 @@ puts "age is _#{age}_ ok"
 puts ""
 
 puts "would you like to see your results type: yes or no?"
-puts ""
-anwser = gets.chomp
+anwser = gets.chomp.downcase
+
 until  anwser == true || anwser == false
 	if anwser == "yes"
 
@@ -74,6 +76,6 @@ puts "we will call you, thanks for coming in!"
 anwser = false
 else 
 puts "you have to care about your hamster type: yes or no?"
-anwser = gets.chomp
+anwser = gets.chomp.downcase!
 end
 end
