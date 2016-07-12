@@ -2,8 +2,13 @@
 # hamster's name (the clerk names any hamsters who come in without name tags, so all hamsters have names)
 
 puts "what is your hamsters name?"
-hamster_name = gets.chomp.capitalize
-puts "#{hamster_name}, Great Name!"
+hamster_name = gets.chomp
+if hamster_name.empty?
+	hamster_name ="chaz"
+end
+	puts "we will call you hamsters #{hamster_name}"
+	
+
 puts ""
 # volume level from 1 to 10 (some people are light sleepers who won't adopt extra-squeaky hamsters)
 
@@ -52,8 +57,10 @@ puts "try again 1-100 or don't know leave blank"
 age = gets.chomp
 end
 
-puts "age is _#{age}_ ok"
-puts ""
+if age.empty?
+	age = nil 
+end
+puts "your Hamster age is #{age}..."
 
 puts "would you like to see your results type: yes or no?"
 anwser = gets.chomp.downcase
