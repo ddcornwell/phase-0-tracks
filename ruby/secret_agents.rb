@@ -13,45 +13,53 @@ def encrypt(name)
 	 end
 	 counter += 1 
     end
-p	name
+name
 end
 	 
 	 
 	 #encrypt("josh")
 	 
-	 def decrypt(spy_name)
+	 def decrypt(name)
 	 	counter = 0 
-	 	name = ""
+		normal = ""
 	 	abc = "abcdefghijklmnopqrstuvwxyz"
-	 	while counter < spy_name.length
-	 	 	x = abc.index(spy_name[counter])-1
-	 	 	name += abc[x]
+	 	while counter < name.length
+	 	 	x = abc.index(name[counter])-1
+	 	 	normal += abc[x]
 	 	     counter += 1
 	 	     end
-	 	 	p name
+	 	 normal
 	 	 end
+	 	 
 	# INTERFACE
 
 	puts "would you like to? encrypt type: 2 or decrypt type: 5"
 	spy = gets.chomp
+until  spy == "2" || spy == "5"
+	puts "would you like to? encrypt type: 2 or decrypt type: 5"
+	spy = gets.chomp
+end
 	if spy == "2"
 		puts "what name would you like to encrypt"
-		name = gets.chomp
-	puts encrypt(name)
+		name = gets.chomp.downcase
+		puts ""
+		puts "your spy name is now ' #{encrypt(name)}'!"
 	
-	elsif  spy == "5"
+	
+	else  spy == "5"
 	puts "what spy name would you like to decrypt?"
-	spy_name = gets.chomp 
-	puts decrypt(spy_name)
-else
-	puts "would you like to? encrypt type: 2 or decrypt type: 5"
-	end
+	name = gets.chomp.downcase 
+	puts ""
+	puts "your decrypted name is now '#{decrypt(name)}' "
 	
-
+	
+end
+puts ""
+puts "Goodbye Agnet"
 
 	 	 
-# encrypt("abc") 
-# encrypt("zed") 
+# # encrypt("abc") 
+# # encrypt("zed") 
 # decrypt("bcd") 
-# decrypt("afe")
-# decrypt(encrypt("swordfish"))
+# # decrypt("afe")
+# # decrypt(encrypt("swordfish"))
