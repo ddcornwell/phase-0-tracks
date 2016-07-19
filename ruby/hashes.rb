@@ -73,10 +73,11 @@ puts "Ok looks Great"
 puts ""
 dan_designer.each {|key, value| puts "#{key}: #{value}"}
 puts ""
-# ----------------------print out ----
+# -------------------------------------
+# --------------loop-------------------
 answer = "y"
 while answer == "y"
-
+# -------------------------------------
 puts "what would you like to update anything? type(y/n)"
 answer = gets.chomp
 until answer == "y" || answer == "n"
