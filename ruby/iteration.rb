@@ -98,11 +98,11 @@ numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 puts ""
 p numbers.select { |num| num.even? }
 puts ""
-puts "Hash only items satisfying a certain condition even"
+puts "Hash only items satisfying a certain condition even......."
 hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
 puts ""
-p hash.select {|key, value|  value.even?}
-puts hash.values
+a = hash.select {|key, value|  value.even?}
+puts a.values
 # A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay)
 puts ""
 puts "Array  until  evaluates to false..."
@@ -115,5 +115,3 @@ puts "Hash until evaluates to false"
 hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
 puts ""
 p hash.drop_while{ |k,v| v < 6}
-
-
