@@ -11,6 +11,7 @@
     # ==========================================
 
 hallywood_actors = {"Jensen Ackles" => "Supernatural", "Christian Bale" => "The Dark Knight", "Nicolas Cage" => "Leaving Las Vegas", "Eric Dane" => "Grey's Anatomy", "Nelsan Ellis" => "True Blood"}
+
 puts "Original data:"
 puts ""
 p hallywood_actors
@@ -45,10 +46,9 @@ puts ""
 p hallywood_actors
 puts ''
 
-	hallywood_actors.map! do |actor|
-	p actor
-	actor.gsub(/[aeiou]/, '*')    
-	end 
+	hallywood_actors.map! do |i|
+p	i.upcase
+	end
 	
 puts ""
 puts "After .map call:"
@@ -64,21 +64,21 @@ p hallywood_actors
 puts ""
 puts "Array "
 puts ""
-numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+p numbers = [1, 2, 3, 4, 5, 6, 7, 8]
 puts ""
 puts "Hash "
 puts ""
-hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
+p hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
 
 # A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
 puts ""
 puts "Array deleting any numbers that are less than 5"
 puts ""
-puts numbers.delete_if {|number| number < 5}
+p numbers.delete_if {|num| num < 5}
 puts ""
 puts "Hash deleting any numbers that are less than 5"
 puts ""
-puts hash.delete_if {|key, value|  value < 5}
+p hash.delete_if {|key, value|  value < 5}
 # A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
 puts ""
 puts "Array keeping any numbers that are less than 5"
@@ -90,6 +90,7 @@ puts "Hash keeping any numbers that are less than 5"
 hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
 puts ""
 p hash.keep_if { |x,v| v < 5}
+puts  hash.values
 # A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
 puts ""
 puts "Array  only items satisfying a certain condition even"
@@ -101,6 +102,7 @@ puts "Hash only items satisfying a certain condition even"
 hash = {one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9}
 puts ""
 p hash.select {|key, value|  value.even?}
+puts hash.values
 # A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay)
 puts ""
 puts "Array  until  evaluates to false..."
