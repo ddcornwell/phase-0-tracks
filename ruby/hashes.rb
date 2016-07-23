@@ -34,10 +34,10 @@ age = age.to_i
 puts ""
 
   # Number of Children
-  puts "How many Children do you have? type: 1-10"
+  puts "How many Children do you have?" 
   children = gets.chomp
-  until  children.to_i > 1 && children.to_i < 11
-  puts "How many Children? type: 1-10"
+  until  children == "0" || children.to_i  >= 1
+  puts "How many Children? type: 0-10"
   children = gets.chomp
   end
   children = children.to_i
