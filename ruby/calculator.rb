@@ -29,26 +29,25 @@
 
 
 
- def add(x,y)
-   a = x + y
-    puts "add: #{x} + #{y} answer #{a}" 
+  def add(x,y)
+  a = x + y
+    puts "add: #{x} + #{y} = #{a}" 
   end
 
   def subtract(x,y)
-   a= x - y
-    puts "subtract: #{x} - #{y} answer #{a}" 
+  a= x - y
+    puts "subtract: #{x} - #{y} = #{a}" 
   end
 
   def multiply(x,y)
     a =  x.to_i * y.to_i 
-     "multiply: #{x} x #{y} answer #{a}"
-    
+    puts "multiply: #{x} x #{y} = #{a}"
   end
 
 # add(2,5)
 # subtract(2,5)
 # multiply(2,5)
-
+print = []
 loop do
 
 puts "what you like to to do: add, subtract, multiply"
@@ -58,9 +57,8 @@ answer = gets.chomp
 
 case answer
 
-# =====================add============
-
 when "add"
+
 puts "what is the fist number?"
 one = gets.chomp
 
@@ -80,6 +78,10 @@ two = gets.chomp
 end
 
 two = two.to_i
+
+three = one + two
+
+f = "#{one} + #{two} = #{three}"
 
 add(one,two)
 puts 
@@ -108,6 +110,10 @@ end
 
 two = two.to_i
 
+three = one + two
+
+f = "#{one} - #{two} = #{three}"
+
 subtract(one,two)
 puts 
 
@@ -125,7 +131,7 @@ end
 one = one.to_i
 
 puts "what is the second number?"
-two = gets .chomp 
+two = gets.chomp 
 
 until two == "0" || two.to_i >= 1 
 puts "second number?"
@@ -134,6 +140,10 @@ end
 
 two = two.to_i
 
+three = one + two
+
+f = "#{one} * #{two} = #{three}"
+
 multiply(one, two)
 
 puts 
@@ -141,17 +151,15 @@ puts
 when "exit"
 
 puts "have a nice day!"
-
+puts 
+puts print
 break
 
 else 
   puts "need to type: add, subtract, multiply? "
 end
-  
+  print << f
 end 
-
-
-
 
 
 
