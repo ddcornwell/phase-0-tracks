@@ -1,165 +1,112 @@
-# our calculator should ...
-# add two integers and return an integer
-# subtract two integers and return an integer
-# multiply two integers and return an integer
+  # Write a calculate method that takes three parameters: an integer, an operator string (example: "+"), and another integer. The method should execute the operation and return the result, an integer. The method should be able to handle the +, -, *, and / operations. For example, calculate(4, '+', 5) should return 9.
 
-# RSpec
-# 'describe' block for each group of tests  
-  # 'it' block for each individual test
-    # expect(<YOUR CODE>).to eq <RESULT>
 
-# require_relative 'calculator'
+# puts "what is your fist number?"
+# a = gets.chomp
+# puts "what is your second number?"
+# b = gets.chomp
+# puts "would you like to +, - or *?"
+# c = gets.chomp
 
-# describe Calculator do
-#   let(:calculator) { Calculator.new }
 
-#   it "adds two integers" do
-#     expect(calculator.add(3,4)).to eq 7
-#   end
-
-#   it "subtracts two integers" do
-#     expect(calculator.subtract(7,1)).to eq 6
-#   end
-
-#   it "multiplies two integers" do
-#     expect(calculator.multiply(2,3)).to eq 6
-#   end
-# end
+  
 
 
 
+# calculate(a, b, c)
 
-  def add(x,y)
-  a = x + y
-    puts "add: #{x} + #{y} = #{a}" 
+
+def calc(a,b,c)
+  case b 
+  when "+"
+  x = a.to_i +  c.to_i
+  when "-"
+  x = a.to_i -  c.to_i
+  when "*"
+  x = a.to_i * c.to_i
   end
-
-  def subtract(x,y)
-  a= x - y
-    puts "subtract: #{x} - #{y} = #{a}" 
-  end
-
-  def multiply(x,y)
-    a =  x.to_i * y.to_i 
-    puts "multiply: #{x} x #{y} = #{a}"
-  end
-
-# add(2,5)
-# subtract(2,5)
-# multiply(2,5)
-print = []
-loop do
-
-puts "what you like to to do: add, subtract, multiply"
-puts "or type 'exit' to end the program?"
-answer = gets.chomp 
+  puts 
+  q = "#{a.to_i} #{b} #{c.to_i} = #{x} "
+  
+  puts q
+  puts 
+end
 
 
-case answer
 
-when "add"
+store = []
+# =======================================
+loop do 
+puts "what you like to to do: use a calculator type y or exit"
+calculator = gets.chomp
+until calculator == "y" ||calculator == "exit"
+puts "calculator type y or exit"
+calculator = gets.chomp
+end
 
-puts "what is the fist number?"
+# =======================================
+break if calculator == "exit"
+
+  
+# =======================================
+puts "what is your fist number?"
 one = gets.chomp
 
 until one == "0" || one.to_i >= 1 
 puts "fist number?"
-one = gets.chomp
+one = gets.chomp 
 end
 
-one = one.to_i
-
-puts "what is the second number?"
+# =======================================
+ puts "what is the second number?"
 two = gets.chomp
-
 until two == "0" || two.to_i >= 1 
 puts "second number?"
 two = gets.chomp 
 end
 
-two = two.to_i
+# =======================================
+puts "would you like to +, - or *?"
+operator = gets.chomp
+until operator == "+" ||operator == "-" || operator == "*" 
+puts "need a operator?"
+operator = gets.chomp 
+end
 
-three = one + two
+# =======================================
+ 
 
-f = "#{one} + #{two} = #{three}"
 
-add(one,two)
+f = "#{one} - #{operator} = #{two}"
 puts 
-
-# =====================subtract=============
-
-
-when "subtract"
-puts "what is the fist number?"
-one = gets.chomp
-
-until one == "0" || one.to_i >= 1 
-puts "fist number?"
-one = gets.chomp
+calc(one, operator, two)
+store << f 
 end
 
-one = one.to_i
-
-puts "what is the second number?"
-two = gets.chomp
-
-until two == "0" || two.to_i >= 1 
-puts "second number?"
-two = gets.chomp 
-end
-
-two = two.to_i
-
-three = one + two
-
-f = "#{one} - #{two} = #{three}"
-
-subtract(one,two)
-puts 
 
 
-# =====================multiply=============
-when "multiply"
-puts "what is the fist number?"
-one = gets.chomp
-
-until one == "0" || one.to_i >= 1 
-puts "fist number?"
-one = gets.chomp
-end
-
-one = one.to_i
-
-puts "what is the second number?"
-two = gets.chomp 
-
-until two == "0" || two.to_i >= 1 
-puts "second number?"
-two = gets.chomp 
-end
-
-two = two.to_i
-
-three = one + two
-
-f = "#{one} * #{two} = #{three}"
-
-multiply(one, two)
-
-puts 
-
-when "exit"
-
-puts "have a nice day!"
-puts 
-puts print
-break
-
-else 
-  puts "need to type: add, subtract, multiply? "
-end
-  print << f
+puts "would you like to see your inputs type y/n"
+inputs = gets.chomp 
+until inputs == "y" || inputs == "n"
+puts "see your inputs type y/n"
+inputs = gets.chomp
 end 
+
+
+if inputs == "y"
+  puts store
+else 
+  puts "have a great day"
+end
+
+
+
+
+
+
+
+
+
 
 
 
