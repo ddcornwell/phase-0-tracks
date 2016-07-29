@@ -1,5 +1,6 @@
 class TodoList
 attr_reader :list
+
   def initialize(arg)
   @list = arg
   end
@@ -9,7 +10,7 @@ attr_reader :list
     @list
   end
 # method called add item that adds item to the list
-  def add_items(arg)
+  def add_item(arg)
     @list << arg
   end
 # method called delete item that delete items from the list 
@@ -19,7 +20,7 @@ attr_reader :list
 
 # Method that returns the value of any index of that array
   def get_item(i)
-    @list[i]
+    @list[i.to_i]
   end
 
 end
