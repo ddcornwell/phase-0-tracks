@@ -12,13 +12,12 @@ attr_accessor :word, :letter
 	end
 
 	def guess(letter)
-		
 		if word.include? letter
 		letter = true
 		else
 		letter = false
 		end
 		letter
-		end 
+	end 
 
 end
