@@ -13,4 +13,5 @@ class Game
 		else
 			return false
 		end
-	end
+	end 
+end
