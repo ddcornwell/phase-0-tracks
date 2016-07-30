@@ -13,7 +13,7 @@ describe Game do
   end
 
    it "guess number" do
-    expect(game.guess(number)).to eq true || false
+    expect(game.guess(3)).to eq true || false
   end
 
 

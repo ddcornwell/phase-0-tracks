@@ -1,3 +1,4 @@
+
 class Game
 	def player_one(name)
 		name 		
@@ -8,10 +9,10 @@ class Game
 	end
 
 	def guess(number)
-		if number == number
-			return true
+		if number.to_i == number.to_i
+			 true
 		else
-			return false
+			false
 		end
 	end 
 end
