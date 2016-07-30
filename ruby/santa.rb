@@ -1,50 +1,60 @@
-# Your class should have three instance methods:
 class Santa
-# gender, which will be a string passed in on initialization
-# ethnicity, which will be a string passed in on 
-# initialization
-	def initialize(gender, ethinity)
-		# "inside the class" and "outside the class" 
-		@gender = gender
-		@ethinity = ethinity
-		@age = 0
+	attr_reader :reindeer_ranking
+	attr_accessor :age
+	
+	def initialize(gender, ethnicity)
+	@gender = gender
+	@ethnicity = ethnicity
+	@age = 0
+	@reindeer_ranking = reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+
 	end 
-# A speak method that will print "Ho, ho, ho! Haaaappy holidays!" (Santa has been working on being more inclusive.)
-# speak method
-	def speak 
-	puts "Ho, ho, ho! Haaaappy holidays!" 
+	
+	def speak
+	puts "Ho, ho, ho! Haaaappy holidays!"
 	end
-# An eat_milk_and_cookies method that takes a cookie type (example: "snickerdoodle") as a parameter and prints "That was a good <type of cookie here>!"
-# An eat_milk_and_cookies method
-def eat_milk_cookies( cookie_type )
-	puts "That was a good #{cookie_type}!"
-end 
-# celebrate_birthday should age Santa by one year.
-def celebrate_birthday
-	@age = age += 1
-end 
-# get_mad_at can take a reindeer's name as an argument, and move that reindeer in last place in the reindeer rankings. Vixen knows what he did.
-def get_mad_at(dear_name)
-	@reindeer_ranking = reindeer_ranking.delete(dear_name)
-	@reindeer_ranking = reindeer_ranking.push(dear_name)
-end 
+	
+	def eat_milk_and_cookies(type)
+		puts "That was a good #{type}!" 
+	end
+	
+	def celebrate_birthday
+		@age += 1
+	end 
+	
+	def get_mad_at(reindeer_name)
+		@reindeer_name = reindeer_ranking.delete(reindeer_name)
+		@reindeer_ranking = reindeer_ranking.push(reindeer_name)
+	end
+	
+def about
+		puts "----------------------------------------------------------"
+		puts "Name: #{@gender}"
+		puts "Their ethnicity is: #{@ethnicity}"
+		puts "His favorite reindeers:"
+		puts
+		puts @reindeer_ranking
+		puts 
+		puts "Santa birthday will turn: #{celebrate_birthday}"
+		puts "Santa love to say: #{speak}"
+		puts "----------------------------------------------------------"
+	end
+	
+end
 
-def print
-	puts @gender
-	puts @ethinity
+reindeer_name = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
-end 
 
-# An initialize method that prints "Initializing Santa instance ...".
-# Add a bit of code below your class declaration to check that you're able to initialize a Santa instance and call its methods.
+gender = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 
-# =================
-# End of Class
-end 
+ethnicity = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
-reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 
-santas = []
-santas << Santa.new("agender", "black")
+red_santa = Santa.new(gender.sample, ethnicity.sample)
 
-santas.prints
+
+red_santa.age = rand(140)
+# red_santa.get_mad_at("Cupid")
+# puts red_santa.celebrate_birthday
+
+20.times { red_santa.about  }

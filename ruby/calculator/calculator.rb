@@ -1,4 +1,4 @@
-class Calculator
+cdclass Calculator
 	def add(x,y)
 		x + y
 	end
