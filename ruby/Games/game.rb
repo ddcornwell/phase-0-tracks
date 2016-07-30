@@ -7,3 +7,29 @@
 #    the program loses.
 # Intro text, wait for user to type 'start'
 
+class Game
+	def player_one(name)
+		name = gets.chomp
+	end
+
+	def player_two(name)
+		 name = gets.chomp
+	end
+
+
+	# def subtract(x,y)
+	# 	x - y
+	# end
+
+
+
+	# def multiply(x,y)
+	# 	x * y
+	# end
+
+
+	# def divide(x,y)
+	# 	x / y
+	# end
+	
+end
