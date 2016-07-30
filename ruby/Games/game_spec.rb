@@ -3,7 +3,9 @@ require_relative 'game'
 describe Game do
   let(:word, :letter) { Game.new }
    describe '#initialize' do
-    
+    it 'should respond with default values' do
+      @word = word 
+    @letter = letter
   it "player_one" do
     expect(game.player_one("hello")).to eq "hello"
   end
