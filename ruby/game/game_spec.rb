@@ -10,7 +10,7 @@ describe Game do
 
   it "hand looks at players pick" do
   	game = Game.new
-    expect(game.hand(num)).to eq true
+    expect(game.hand("1")).to eq false
   end
 
 

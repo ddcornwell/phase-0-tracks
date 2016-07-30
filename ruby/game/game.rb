@@ -24,14 +24,14 @@ class Game
 	end
 end 
 
-puts "---Game My Hand!---"
-game = Game.new
-puts game.pick
+# puts "---Game My Hand!---"
+# game = Game.new
+# puts game.pick
 
-while !game.game_over 
-puts "pick and number? 1-5..."
-num = gets.chomp
-if !game.hand(num) 
-end 
-end
-puts "you won! took you #{game.guess} tries"
+# while !game.game_over 
+# puts "pick and number? 1-5..."
+# num = gets.chomp
+# if !game.hand(num) 
+# end 
+# end
+# puts "you won! took you #{game.guess} tries"
