@@ -12,11 +12,7 @@ describe Game do
   end
 
    it "guess number" do
-    expect(game.guess(letter)).to eq 
-    if word.include? letter
-       true
-    else
-      false
+    expect(game.guess(letter)).to eq true || false
   end
 
 
