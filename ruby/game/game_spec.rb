@@ -5,12 +5,12 @@ describe Game do
 
   it "pick number random " do
   	game = Game.new
-    expect(game.pick).to eq @hand
+    expect(game.pick="1").to eq "1"
   end
 
   it "hand looks at players pick" do
   	game = Game.new
-    expect(game.hand(@number)).to eq true
+    expect(game.hand("1")).to eq true
   end
 
 
