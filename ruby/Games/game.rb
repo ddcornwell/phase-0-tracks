@@ -18,7 +18,7 @@ attr_accessor :word, :letter
 		else
 		letter = false
 		end
-		letter
+		
 	end 
 
 end
