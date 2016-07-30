@@ -5,7 +5,7 @@ describe Game do
 
   it "pick number random " do
   	game = Game.new
-    expect(game.pick).to eq "1"
+    expect(game.pick).to eq "1" || "2"|| "3"|| "4"|| "5"
   end
 
   it "hand looks at players pick" do
