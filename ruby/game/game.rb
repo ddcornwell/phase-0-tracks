@@ -1,6 +1,6 @@
 
 class Game
-	attr_reader :guess, :game_over
+	attr_reader :guess, :game_over, :num
 
 	def initialize 
 		@hand = ["1", "2", "3", "4", "5"]
