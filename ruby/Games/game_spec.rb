@@ -12,6 +12,10 @@ describe Game do
     expect(game.player_two("sarah")).to eq "sarah"
   end
 
+   it "guess number" do
+    expect(game.guess(number)).to eq true || false
+  end
+
 
 end
 

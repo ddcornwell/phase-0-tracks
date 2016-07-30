@@ -7,5 +7,10 @@ class Game
 		 name
 	end
 
-	
-end
+	def guess(number)
+		if number == number
+			return true
+		else
+			return false
+		end
+	end
