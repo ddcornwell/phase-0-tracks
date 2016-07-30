@@ -1,5 +1,6 @@
 
 class Game
+
 attr_accessor :word, :letter
 
 
