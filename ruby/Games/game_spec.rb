@@ -1,7 +1,7 @@
 require_relative 'game'
 
 
-describe Calculator do
+describe game do
   let(:game) { Game.new }
 
   it "player_one" do
