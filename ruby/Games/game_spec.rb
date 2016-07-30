@@ -2,20 +2,17 @@ require_relative 'game'
 
 describe Game do
   let(:word, :letter) { Game.new }
-   describe '#initialize' do
-    it 'should respond with default values' do
-      @word = word 
-    @letter = letter
+
   it "player_one" do
-    expect(game.player_one("hello")).to eq "hello"
+    expect(game.player_one(word)).to eq word
   end
 
   it "player_two" do
-    expect(game.player_two("h")).to eq "h"
+    expect(game.player_two(letter)).to eq letter
   end
 
    it "guess number" do
-    expect(game.guess("h")).to eq true || false
+    expect(game.guess(letter)).to eq true || false
   end
 
 
