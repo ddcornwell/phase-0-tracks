@@ -8,7 +8,7 @@ describe Game do
   end
 
   it "hand looks at players pick" do
-    expect(game.("1")).to eq "1"
+    expect(game.hand(num)).to eq "1"
   end
 
 
