@@ -1,14 +1,16 @@
 require_relative 'game'
 
 describe Game do
-  let(:guess, :game_over) { Game.new }
+  let(:game) { Game.new }
 
   it "pick number random " do
+  	game = Game.new
     expect(game.pick).to eq "1"
   end
 
   it "hand looks at players pick" do
-    expect(game.hand(num)).to eq "1"
+  	game = Game.new
+    expect(game.hand(num)).to eq true
   end
 
 

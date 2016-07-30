@@ -10,7 +10,7 @@ class Game
 	
 	def pick
 		@number = @hand.sample
-	
+		@number
 	end 
 	
 	def hand(num)
@@ -19,19 +19,19 @@ class Game
 			@game_over = true
 			else 
 			puts "Sorry Pick agian?"
-			false
+			@game_over = false
 		end 
 	end
 end 
 
-# puts "---Game My Hand!---"
-# game = Game.new
-# puts game.pick
+puts "---Game My Hand!---"
+game = Game.new
+puts game.pick
 
-# while !game.game_over 
-# puts "pick and number? 1-5..."
-# num = gets.chomp
-# if !game.hand(num) 
-# end 
-# end
-# puts "you won! took you #{game.guess} tries"
+while !game.game_over 
+puts "pick and number? 1-5..."
+num = gets.chomp
+if !game.hand(num) 
+end 
+end
+puts "you won! took you #{game.guess} tries"
