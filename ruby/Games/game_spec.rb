@@ -1,19 +1,18 @@
 require_relative 'game'
 
-
 describe Game do
-  let(:game) { Game.new }
+  let(:word, :letter) { Game.new }
 
   it "player_one" do
-    expect(game.player_one("teacher")).to eq "teacher"
+    expect(game.player_one("hello")).to eq "hello"
   end
 
   it "player_two" do
-    expect(game.player_two("t")).to eq "t"
+    expect(game.player_two("h")).to eq "h"
   end
 
    it "guess number" do
-    expect(game.guess(3)).to eq true || false
+    expect(game.guess("h")).to eq true || false
   end
 
 

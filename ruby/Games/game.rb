@@ -1,21 +1,23 @@
 
 class Game
+attr_accessor :word, :letter
 
 	def initialize
-
+		@word = word 
+		@letter = letter
 	end
 
 	def player_one(word)
-		word  		
+		@word  		
 	end
 
-	def player_two(guess)
-		guess 
+	def player_two(letter)
+		@letter
 	end
 
-	def guess(number)
-		if number.to_i == number.to_i
+	def guess(letter)
 		
+		if @word .include? @letter
 			 true
 		else
 			false
