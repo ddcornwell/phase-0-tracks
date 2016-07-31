@@ -15,7 +15,7 @@ class Game
 	
 	def hand(num)
 		@guess += 1 
-		if @guess > 4 
+		if @guess >= 4 
 			puts " game over"
 		elsif @number == num
 			  @game_over = true
