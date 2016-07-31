@@ -2,7 +2,7 @@ class Game
 	attr_reader :guess, :game_over
 	attr_accessor :number
 	def initialize 
-		@hand = ["1", "2", "3", "4", "5"]
+		@hand = [ 1, 2, 3, 4, 5]
 		@guess = 0
 		@game_over = false 
 	end 
