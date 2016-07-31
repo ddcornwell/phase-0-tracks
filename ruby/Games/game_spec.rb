@@ -3,14 +3,14 @@ require_relative 'game'
 describe Game do
   let(:game) { Game.new }
 
-  it  { should contain(1, 2, 3, 4, 5) } do
+  it "pick number random " do
   	game = Game.new
-    expect(game.pick).to eq 1
+    expect(game.pick).to eq 
   end
 
   it "hand looks at players pick" do
   	game = Game.new
-    expect(game.hand(1)).to eq true
+    expect(game.hand(num)).to be_kind_of(Fixnum)
   end
 
 
