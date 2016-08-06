@@ -6,6 +6,7 @@
 //RELEASE 0
 //Array that will hold the longest current word
 var phrase = [""];
+//Array of words
 var array = ["long phrase","longest phrase","longer phrase"]
 
 
@@ -16,7 +17,7 @@ function sorter(array){
 		}
 	}
 }
-
+// Driver code for release 1
 (sorter(array));
 console.log(phrase);
 
@@ -49,6 +50,11 @@ if (checks(person1, person2) === true) {
 }
 
 //RELEASE 2
+//create an array of a few letters to be selected from
+//make a function that chooses a random number within the 
+//amount of strings in the array, and use that random
+//number to choose the index of the array and add that to \
+//a new variable
 
 var letters = ["b", "s", "t", "r", "a", "o"];
 
@@ -66,7 +72,7 @@ function words(number){
 	return together;
 }
 
-
+// Driver code to test randomWord function
 // crete variable just to store the result
 for (var time = 1; time < 11; time++){
 	test = words(6);
